@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -12,7 +13,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="dark:bg-black dark:text-white font-sans">
+			<body
+				suppressHydrationWarning={true}
+				className="dark:bg-black dark:text-white"
+			>
+				<Navbar />
 				{children}
 			</body>
 		</html>
